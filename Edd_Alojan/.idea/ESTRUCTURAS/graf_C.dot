@@ -1,0 +1,9 @@
+digraph G{
+"Node12"[label ="12", style = filled, fillcolor = "#FF4000"]
+"Node12" -> "Node23"
+"Node23"[label ="23", style = filled, fillcolor = "#FF4000"]
+"Node23" -> "Node34"
+"Node34"[label ="34", style = filled, fillcolor = "#FF4000"]
+"Node34" -> "Node54"
+"Node54"[label ="54", style = filled, fillcolor = "#FF4000"]
+}
