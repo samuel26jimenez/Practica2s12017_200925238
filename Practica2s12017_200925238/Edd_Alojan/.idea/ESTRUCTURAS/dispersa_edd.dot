@@ -2,59 +2,83 @@ digraph G{
 "ini"[label = "Ini", style = filled, shape=box]
 "ini" -> "na"
 "na"[label = "a", style = filled, shape=box]
-"na" -> "nd"[rankdir=UD];
-"nd" -> "na"
+"na" -> "ni"[rankdir=UD];
+"ni" -> "na"
 "na,aaaa,gmail.com"[label = "aaaa", style = filled, shape=circle]
 "na" -> "na,aaaa,gmail.com"[constraint=false];
 "na,aaaa,gmail.com" -> "na"[constraint=false];
 {rank=same; "na"  "na,aaaa,gmail.com"}
 {rank=same; "na,aaaa,gmail.com"  "na"}
-"nd"[label = "d", style = filled, shape=box]
-"nd" -> "ne"[rankdir=UD];
-"ne" -> "nd"
-"nd,ddd,yahoo.com"[label = "ddd", style = filled, shape=circle]
-"nd" -> "nd,ddd,yahoo.com"[constraint=false];
-"nd,ddd,yahoo.com" -> "nd"[constraint=false];
-{rank=same; "nd"  "nd,ddd,yahoo.com"}
-{rank=same; "nd,ddd,yahoo.com"  "nd"}
-"ne"[label = "e", style = filled, shape=box]
-"ne" -> "no"[rankdir=UD];
-"no" -> "ne"
-"ne,eteee,gmail.com"[label = "eteee", style = filled, shape=circle]
-"ne" -> "ne,eteee,gmail.com"[constraint=false];
-"ne,eteee,gmail.com" -> "ne"[constraint=false];
-{rank=same; "ne"  "ne,eteee,gmail.com"}
-{rank=same; "ne,eteee,gmail.com"  "ne"}
-"no"[label = "o", style = filled, shape=box]
-"no" -> "ns"[rankdir=UD];
-"ns" -> "no"
-"no,o,gmail.com"[label = "o", style = filled, shape=circle]
-"no" -> "no,o,gmail.com"[constraint=false];
-"no,o,gmail.com" -> "no"[constraint=false];
-{rank=same; "no"  "no,o,gmail.com"}
-{rank=same; "no,o,gmail.com"  "no"}
-"ns"[label = "s", style = filled, shape=box]
-"ns,sdg,gmail.com"[label = "sdg", style = filled, shape=circle]
-"ns" -> "ns,sdg,gmail.com"[constraint=false];
-"ns,sdg,gmail.com" -> "ns"[constraint=false];
-{rank=same; "ns"  "ns,sdg,gmail.com"}
-{rank=same; "ns,sdg,gmail.com"  "ns"}
+"na,asdf,gmial.com"[label = "asdf", style = filled, shape=circle]
+"na,aaaa,gmail.com" -> "na,asdf,gmial.com"[constraint=false];
+"na,asdf,gmial.com" -> "na,aaaa,gmail.com"[constraint=false];
+{rank=same; "na,aaaa,gmail.com" "na,asdf,gmial.com"}
+{rank=same; "na,asdf,gmial.com" "na,aaaa,gmail.com"}
+"na,asdf,kik.com"[label = "asdf", style = filled, shape=circle]
+"na,asdf,gmial.com" -> "na,asdf,kik.com"[constraint=false];
+"na,asdf,kik.com" -> "na,asdf,gmial.com"[constraint=false];
+{rank=same; "na,asdf,gmial.com" "na,asdf,kik.com"}
+{rank=same; "na,asdf,kik.com" "na,asdf,gmial.com"}
+"ni"[label = "i", style = filled, shape=box]
+"ni" -> "nj"[rankdir=UD];
+"nj" -> "ni"
+"ni,isisi,yahoo.com"[label = "isisi", style = filled, shape=circle]
+"ni" -> "ni,isisi,yahoo.com"[constraint=false];
+"ni,isisi,yahoo.com" -> "ni"[constraint=false];
+{rank=same; "ni"  "ni,isisi,yahoo.com"}
+{rank=same; "ni,isisi,yahoo.com"  "ni"}
+"nj"[label = "j", style = filled, shape=box]
+"nj" -> "nk"[rankdir=UD];
+"nk" -> "nj"
+"nj,jsjs,sd.com"[label = "jsjs", style = filled, shape=circle]
+"nj" -> "nj,jsjs,sd.com"[constraint=false];
+"nj,jsjs,sd.com" -> "nj"[constraint=false];
+{rank=same; "nj"  "nj,jsjs,sd.com"}
+{rank=same; "nj,jsjs,sd.com"  "nj"}
+"nk"[label = "k", style = filled, shape=box]
+"nk,kgir,nkd.com"[label = "kgir", style = filled, shape=circle]
+"nk" -> "nk,kgir,nkd.com"[constraint=false];
+"nk,kgir,nkd.com" -> "nk"[constraint=false];
+{rank=same; "nk"  "nk,kgir,nkd.com"}
+{rank=same; "nk,kgir,nkd.com"  "nk"}
 "ini" -> "ngmail.com"
 {rank=same; "ini"  "ngmail.com"}
 "ngmail.com"[label = "gmail.com", style = filled, shape=box]
-"ngmail.com" -> "nyahoo.com"
-"nyahoo.com" -> "ngmail.com"
-{rank=same; "ngmail.com"  "nyahoo.com"}
-{rank=same; "nyahoo.com"  "ngmail.com"}
+"ngmail.com" -> "ngmial.com"
+"ngmial.com" -> "ngmail.com"
+{rank=same; "ngmail.com"  "ngmial.com"}
+{rank=same; "ngmial.com"  "ngmail.com"}
 "ngmail.com" -> "na,aaaa,gmail.com"[rankdir=UD];
 "na,aaaa,gmail.com" -> "ngmail.com"
-"na,aaaa,gmail.com" -> "ne,eteee,gmail.com"[rankdir=UD];
-"ne,eteee,gmail.com" -> "na,aaaa,gmail.com"
-"ne,eteee,gmail.com" -> "no,o,gmail.com"[rankdir=UD];
-"no,o,gmail.com" -> "ne,eteee,gmail.com"
-"no,o,gmail.com" -> "ns,sdg,gmail.com"[rankdir=UD];
-"ns,sdg,gmail.com" -> "no,o,gmail.com"
+"ngmial.com"[label = "gmial.com", style = filled, shape=box]
+"ngmial.com" -> "nkik.com"
+"nkik.com" -> "ngmial.com"
+{rank=same; "ngmial.com"  "nkik.com"}
+{rank=same; "nkik.com"  "ngmial.com"}
+"ngmial.com" -> "na,asdf,gmial.com"[rankdir=UD];
+"na,asdf,gmial.com" -> "ngmial.com"
+"nkik.com"[label = "kik.com", style = filled, shape=box]
+"nkik.com" -> "nnkd.com"
+"nnkd.com" -> "nkik.com"
+{rank=same; "nkik.com"  "nnkd.com"}
+{rank=same; "nnkd.com"  "nkik.com"}
+"nkik.com" -> "na,asdf,kik.com"[rankdir=UD];
+"na,asdf,kik.com" -> "nkik.com"
+"nnkd.com"[label = "nkd.com", style = filled, shape=box]
+"nnkd.com" -> "nsd.com"
+"nsd.com" -> "nnkd.com"
+{rank=same; "nnkd.com"  "nsd.com"}
+{rank=same; "nsd.com"  "nnkd.com"}
+"nnkd.com" -> "nk,kgir,nkd.com"[rankdir=UD];
+"nk,kgir,nkd.com" -> "nnkd.com"
+"nsd.com"[label = "sd.com", style = filled, shape=box]
+"nsd.com" -> "nyahoo.com"
+"nyahoo.com" -> "nsd.com"
+{rank=same; "nsd.com"  "nyahoo.com"}
+{rank=same; "nyahoo.com"  "nsd.com"}
+"nsd.com" -> "nj,jsjs,sd.com"[rankdir=UD];
+"nj,jsjs,sd.com" -> "nsd.com"
 "nyahoo.com"[label = "yahoo.com", style = filled, shape=box]
-"nyahoo.com" -> "nd,ddd,yahoo.com"[rankdir=UD];
-"nd,ddd,yahoo.com" -> "nyahoo.com"
+"nyahoo.com" -> "ni,isisi,yahoo.com"[rankdir=UD];
+"ni,isisi,yahoo.com" -> "nyahoo.com"
 }

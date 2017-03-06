@@ -500,7 +500,7 @@ class Cuerpo_Matriz:
                 aux = aux.abaj
 
             if aux.getLet() == let:
-                print ("<--->" + aux.getLet + "<--->")
+                print ("<--->" + aux.getLet() + "<--->")
                 if aux.der != None:
                     _caden = ""
                     aux = aux.der
@@ -699,7 +699,7 @@ class Cuerpo_Matriz:
                         fichero_escrib.write("\"n" + str(AUXtempVerti.der.getLet()) + ","+ str(AUXtempVerti.der.getE_mail()) +","+ str(AUXtempVerti.der.getDomin()) +"\"[label = \"" + str(AUXtempVerti.der.getE_mail()) + "\", style = filled, shape=circle]\n")
                         fichero_escrib.write("\"n" + str(AUXtempVerti.getLet()) + ","+ str(AUXtempVerti.getE_mail()) +","+ str(AUXtempVerti.getDomin()) + "\" -> \"n"
                                    + str(AUXtempVerti.der.getLet()) + ","+ str(AUXtempVerti.der.getE_mail()) +","+ str(AUXtempVerti.der.getDomin()) + "\"[constraint=false];\n")
-                        fichero_escrib.write("\"n" + str(AUXtempVerti.dere.getLet()) + ","+ str(AUXtempVerti.der.getE_mail()) +","+ str(AUXtempVerti.der.getDomin())
+                        fichero_escrib.write("\"n" + str(AUXtempVerti.der.getLet()) + ","+ str(AUXtempVerti.der.getE_mail()) +","+ str(AUXtempVerti.der.getDomin())
                                    + "\" -> \"n" + str(AUXtempVerti.getLet()) + ","+ str(AUXtempVerti.getE_mail()) +","+ str(AUXtempVerti.getDomin()) + "\"[constraint=false];\n")
                         fichero_escrib.write("{rank=same; \"n" + str(AUXtempVerti.getLet()) + ","+ str(AUXtempVerti.getE_mail()) +","+ str(AUXtempVerti.getDomin()) + "\" \"n" + str(AUXtempVerti.der.getLet())
                                    + ","+ str(AUXtempVerti.der.getE_mail()) +","+ str(AUXtempVerti.der.getDomin()) + "\"}\n");
@@ -831,5 +831,7 @@ class Cuerpo_Matriz:
 # mat.inserta("primero","p","gmail.com")
 # mat.inserta("segundo", "s", "hotmail.com")
 # mat.Graficar_Dispersa()
+
+
 
 
