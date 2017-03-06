@@ -27,13 +27,14 @@ def Elim_webL():
 	return 'Exito delete'
 
 #Metodo Buscar
+#antes del while un tempo=0, dentro del while sumo 1 al entero,
 @app.route('/web_met_bu', methods=['POST'])
 def Bus_webL():
 	bus_l = str(request.form['dat_bu'])
-	a._Buscar(bus_l)
+	x = str(a._Buscar(bus_l))
 	a._Mostrar()
 	a.grafica_Lista()
-	return 'Encontrar Cadena'
+	return x
 
 
 #------------------- Conexion Flask Cola_Metodos ------------------
@@ -50,10 +51,12 @@ def Enque():
 #Metodo Sacar/queue
 @app.route('/web_Que', methods=['POST'])
 def Deque():
-	b.Queue()
+	cad_m = str(request.form['c_dat'])
+	numero = str(b.Queue())
 	b.Mostrar_C()
 	b.Graficar_Cola()
-	return 'Eliminar Exito'
+	#b.Queue()
+	return numero
 
 
 
@@ -69,17 +72,66 @@ def Pila_M():
 	return 'Agregardo Digito'
 
 #Metodo sacar en Pila
-@app.route('/web_pila', methods=['POST'])
+@app.route('/web_pilaSaca', methods=['POST'])
 def Elimin_P():
-	c.Sacar()
+	cad_m = str(request.form['c_dat'])
+	numero = str(c.Sacar())
 	c.Mostrar_P()
 	c.Graficar_Pila()
-	return 'Digito eliminado Pila'
+	return numero
 
 if __name__ == "__main__":
   app.run(debug=True, host='0.0.0.0')
 
-#---------------------------------------------------------------------
+#------------------------  Conexion Flask Dispersa_Metodos -----------------------------
+d = Cuerpo_Matriz
+#Metodo de Insertar en la Matriz
+@app.route('/web_aggM', methods=['POST'])
+def agregar_matriz():
+	nom = str(request.form['nombre'])
+	letra = str(request.form['letra'])
+	dominio = str(requet.form['Dominio'])
+	d.inserta(nom,letra, dominio)
+	d.Graficar_Dispersa()
+	return 'Agregar Exito'
+
+
+@app.route('/web_sup', methods=['POST'])
+#Metodo de Eliminar
+def Web_Agregar():
+	nom = str(request.form['nombre'])
+	letra = str(request.form['letra'])
+	dominio = str(requet.form['Dominio'])
+	d.Suprimir_Dominio(nom,letra, dominio)
+	d.Graficar_Dispersa()
+	return 'Agregar Exito'
+
+
+
+@app.route('/web_agg', methods=['POST'])
+#Metodo de Buscar_Letra
+def Web_Agregar():
+	parametro = str(request.form['dato'])
+	a._Inserta_Nodo(parametro)
+	#dato2 = str(request.form['dato2'])
+	a._Mostrar()
+	a.grafica_Lista()
+	#return  'Hola ' + str(parametro) + ' saludos!'i
+	return 'Agregar Exito'
+
+
+@app.route('/web_agg', methods=['POST'])
+#Metodo de Buscar_Dominio
+def Web_Agregar():
+	parametro = str(request.form['dato'])
+	a._Inserta_Nodo(parametro)
+	#dato2 = str(request.form['dato2'])
+	a._Mostrar()
+	a.grafica_Lista()
+	#return  'Hola ' + str(parametro) + ' saludos!'i
+	return 'Agregar Exito'
+
+
 #---------------- FIN DEL WEB SERVICE FLASK --------------------------
 
 

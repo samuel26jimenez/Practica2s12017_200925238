@@ -110,25 +110,34 @@ public static OkHttpClient webClient = new OkHttpClient();
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         RequestBody elim = new FormEncodingBuilder()
+                .add("c_dat", "")
                 .build();
-        getString("web_Que", elim);
+        String numero = getString("web_Que", elim);
+        
+        if(numero.equals("-")){
+            //guion si esta viacia
+            System.out.println("Esta Vacio--");
+        }else{
+            //Imprimir el numero eliminado
+            System.out.println("valor" + numero);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    public static void getString(String metodo, RequestBody formBody) {
+    public static String getString(String metodo, RequestBody formBody) {
 
         try {
             URL url = new URL("http://0.0.0.0:5000/" + metodo);
             Request request = new Request.Builder().url(url).post(formBody).build();
             Response response = webClient.newCall(request).execute();//Aqui obtiene la respuesta en dado caso si hayas pues un return en python
             String response_string = response.body().string();//y este seria el string de las respuesta
-            System.out.println(response_string);
-            //return response_string;
+            //System.out.println(response_string);
+            return response_string;
         } catch (MalformedURLException ex) {
             java.util.logging.Logger.getLogger(edd_lineal_nlineal.GUI_LISTA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             java.util.logging.Logger.getLogger(edd_lineal_nlineal.GUI_LISTA.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //return null;
+        return null;
     }
     
     

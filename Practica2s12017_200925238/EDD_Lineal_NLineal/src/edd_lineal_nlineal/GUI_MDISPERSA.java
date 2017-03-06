@@ -5,6 +5,15 @@
  */
 package edd_lineal_nlineal;
 
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.logging.Level;
+
 /**
  *
  * @author Samuel
@@ -17,6 +26,8 @@ public class GUI_MDISPERSA extends javax.swing.JFrame {
     public GUI_MDISPERSA() {
         initComponents();
     }
+    
+     public static OkHttpClient webClient = new OkHttpClient();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,6 +51,11 @@ public class GUI_MDISPERSA extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton1.setText("AGREGAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("ELIMINAR");
 
@@ -108,6 +124,37 @@ public class GUI_MDISPERSA extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String bus_cad[] = this.jTextField1.getText().split("@");
+        String let[] = bus_cad[0].split("");
+        RequestBody formBody_bus = new FormEncodingBuilder()
+                .add("nombre", bus_cad[0])
+                .add("letra", let[0])
+                .add("Dominio", bus_cad[1])
+                .build();
+        getString("web_aggM", formBody_bus);
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    public static String getString(String metodo, RequestBody formBody) {
+
+        try {
+            URL url = new URL("http://0.0.0.0:5000/" + metodo);
+            Request request = new Request.Builder().url(url).post(formBody).build();
+            Response response = webClient.newCall(request).execute();//Aqui obtiene la respuesta en dado caso si hayas pues un return en python
+            String response_string = response.body().string();//y este seria el string de las respuesta
+            //System.out.println(response_string);
+            return response_string;
+        } catch (MalformedURLException ex) {
+            java.util.logging.Logger.getLogger(edd_lineal_nlineal.GUI_LISTA.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (Exception ex) {
+            java.util.logging.Logger.getLogger(edd_lineal_nlineal.GUI_LISTA.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    
     /**
      * @param args the command line arguments
      */

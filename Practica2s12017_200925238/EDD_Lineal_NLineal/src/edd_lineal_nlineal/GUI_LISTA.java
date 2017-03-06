@@ -149,24 +149,30 @@ public class GUI_LISTA extends javax.swing.JFrame {
         RequestBody formBody_bus = new FormEncodingBuilder()
                 .add("dat_bu", bus_cad)
                 .build();
-        getString("web_met_bu", formBody_bus);
+        String y = getString("web_met_bu", formBody_bus);
+        int indice = Integer.parseInt(y);
+        if(indice == 0){
+            System.out.println("NO SE ENCONTRO EL DATO");
+        }else{
+            System.out.println("EL DATO SE ENCUENTRA EN EL INDICE" + indice);
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-     public static void getString(String metodo, RequestBody formBody) {
+     public static String getString(String metodo, RequestBody formBody) {
 
         try {
             URL url = new URL("http://0.0.0.0:5000/" + metodo);
             Request request = new Request.Builder().url(url).post(formBody).build();
             Response response = webClient.newCall(request).execute();//Aqui obtiene la respuesta en dado caso si hayas pues un return en python
             String response_string = response.body().string();//y este seria el string de las respuesta
-            System.out.println(response_string);
-            //return response_string;
+            //System.out.println(response_string);
+            return response_string;
         } catch (MalformedURLException ex) {
             java.util.logging.Logger.getLogger(edd_lineal_nlineal.GUI_LISTA.class.getName()).log(Level.SEVERE, null, ex);
         } catch (Exception ex) {
             java.util.logging.Logger.getLogger(edd_lineal_nlineal.GUI_LISTA.class.getName()).log(Level.SEVERE, null, ex);
         }
-        //return null;
+        return null;
     }
     
     
