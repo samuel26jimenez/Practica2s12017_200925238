@@ -301,7 +301,7 @@ class Matriz_Estruct_Dispersa:
         return self.e_mail
 
     def getLet(self):
-        self.let
+        return self.let
 
 
 
@@ -410,7 +410,7 @@ class Cuerpo_Matriz:
 
             if t_Vert != None and t_Vert.getLet() > let:
                 if t_Vert == self.i_Vert:
-                    x3 = self.i_Verti
+                    x3 = self.i_Vert
                     t_Vert = newMatrizNodoV
                     t_Vert.arrib = None
                     t_Vert.abaj = x3
@@ -493,7 +493,7 @@ class Cuerpo_Matriz:
                 tx1 = tx1.abaj
         return False
 
-    def letra_search(self):
+    def letra_search(self, let):
         if self.esVacioV() == False:
             aux = self.i_Vert
             while aux != None and aux.getLet() != let:
@@ -721,7 +721,7 @@ class Cuerpo_Matriz:
 
                 if (Horizon_temp.abaj != None):
                     fichero_escrib.write("\"n" + str(Horizon_temp.getDomin()) + "\" -> \"n" + str(Horizon_temp.abaj.getLet()) + ","+ str(Horizon_temp.abaj.getE_mail()) +","+ str(Horizon_temp.abaj.getDomin()) + "\"[rankdir=UD];\n")
-                    fichero_escrib.write("\"n" + str(Horizon_temp.abaj.getLet()) + ","+ str(Horizon_temp.abaj.getE_mail()) +","+ str(Horizon_temp.abaj.getE_mail()) + "\" -> \"n" + str(Horizon_temp.getDomin()) + "\"\n")
+                    fichero_escrib.write("\"n" + str(Horizon_temp.abaj.getLet()) + ","+ str(Horizon_temp.abaj.getE_mail()) +","+ str(Horizon_temp.abaj.getDomin()) + "\" -> \"n" + str(Horizon_temp.getDomin()) + "\"\n")
                     AUXtempHorizont = Horizon_temp.abaj
 
                     while (AUXtempHorizont.abaj != None):
@@ -827,9 +827,9 @@ class Cuerpo_Matriz:
 
 
 
-mat = Cuerpo_Matriz()
-mat.inserta("primero","p","gmail.com")
-mat.inserta("segundo", "s", "hotmail.com")
-mat.Graficar_Dispersa()
+# mat = Cuerpo_Matriz()
+# mat.inserta("primero","p","gmail.com")
+# mat.inserta("segundo", "s", "hotmail.com")
+# mat.Graficar_Dispersa()
 
 

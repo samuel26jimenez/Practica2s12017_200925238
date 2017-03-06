@@ -58,10 +58,25 @@ public class GUI_MDISPERSA extends javax.swing.JFrame {
         });
 
         jButton2.setText("ELIMINAR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("BUSCAR LETRA");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("BUSCAR DOMINIO");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jTextField1.setText("jTextField1");
 
@@ -133,9 +148,48 @@ public class GUI_MDISPERSA extends javax.swing.JFrame {
                 .add("letra", let[0])
                 .add("Dominio", bus_cad[1])
                 .build();
-        getString("web_aggM", formBody_bus);
+        getString("in_matriz", formBody_bus);
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        String bus_cad[] = this.jTextField2.getText().split("@");
+        String let[] = bus_cad[0].split("");
+        RequestBody formBody_bus = new FormEncodingBuilder()
+                .add("nombre", bus_cad[0])
+                .add("letra", let[0])
+                .add("Dominio", bus_cad[1])
+                .build();
+        getString("web_sup", formBody_bus);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        String bus_cad = this.jTextField3.getText();       
+        RequestBody formBody_bus = new FormEncodingBuilder()
+                .add("dato1", bus_cad)                
+                .build();
+        String letra = getString("web_bus_Let", formBody_bus);
+        System.out.println("---" + letra);
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        
+        String d_cad[] = this.jTextField4.getText().split("@");       
+        RequestBody formBody_bus = new FormEncodingBuilder()
+                .add("dato2", d_cad[1])                
+                .build();
+        String let = getString("web_domin_retorno", formBody_bus);
+        System.out.println("---" + let);
+        
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     public static String getString(String metodo, RequestBody formBody) {
 

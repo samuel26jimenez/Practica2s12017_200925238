@@ -80,17 +80,15 @@ def Elimin_P():
 	c.Graficar_Pila()
 	return numero
 
-if __name__ == "__main__":
-  app.run(debug=True, host='0.0.0.0')
 
 #------------------------  Conexion Flask Dispersa_Metodos -----------------------------
-d = Cuerpo_Matriz
+d = Cuerpo_Matriz()
 #Metodo de Insertar en la Matriz
-@app.route('/web_aggM', methods=['POST'])
+@app.route('/in_matriz', methods=['POST'])
 def agregar_matriz():
 	nom = str(request.form['nombre'])
 	letra = str(request.form['letra'])
-	dominio = str(requet.form['Dominio'])
+	dominio = str(request.form['Dominio'])
 	d.inserta(nom,letra, dominio)
 	d.Graficar_Dispersa()
 	return 'Agregar Exito'
@@ -98,38 +96,31 @@ def agregar_matriz():
 
 @app.route('/web_sup', methods=['POST'])
 #Metodo de Eliminar
-def Web_Agregar():
+def Web_eliminar():
 	nom = str(request.form['nombre'])
 	letra = str(request.form['letra'])
-	dominio = str(requet.form['Dominio'])
+	dominio = str(request.form['Dominio'])
 	d.Suprimir_Dominio(nom,letra, dominio)
 	d.Graficar_Dispersa()
 	return 'Agregar Exito'
 
 
 
-@app.route('/web_agg', methods=['POST'])
+@app.route('/web_bus_Let', methods=['POST'])
 #Metodo de Buscar_Letra
-def Web_Agregar():
-	parametro = str(request.form['dato'])
-	a._Inserta_Nodo(parametro)
-	#dato2 = str(request.form['dato2'])
-	a._Mostrar()
-	a.grafica_Lista()
+def bus_Letras():
+	parametro = str(request.form['dato1'])
+	cad = str(d.letra_search(parametro))
 	#return  'Hola ' + str(parametro) + ' saludos!'i
-	return 'Agregar Exito'
+	return cad
 
 
-@app.route('/web_agg', methods=['POST'])
+@app.route('/web_domin_retorno', methods=['POST'])
 #Metodo de Buscar_Dominio
-def Web_Agregar():
-	parametro = str(request.form['dato'])
-	a._Inserta_Nodo(parametro)
-	#dato2 = str(request.form['dato2'])
-	a._Mostrar()
-	a.grafica_Lista()
-	#return  'Hola ' + str(parametro) + ' saludos!'i
-	return 'Agregar Exito'
+def buscar_Dominio():
+	parametro = str(request.form['dato2'])
+	dominR = str(d.search_Domin(parametro))
+	return dominR
 
 
 #---------------- FIN DEL WEB SERVICE FLASK --------------------------
@@ -137,6 +128,8 @@ def Web_Agregar():
 
 
 
+if __name__ == "__main__":
+  app.run(debug=True, host='0.0.0.0')
 
 
 

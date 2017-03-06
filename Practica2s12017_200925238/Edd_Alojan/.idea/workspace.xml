@@ -20,14 +20,14 @@
     <favorites_list name="Edd_Alojan" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4609929">
+    <splitter split-orientation="horizontal" split-proportion="0.68700266">
       <split-first>
         <leaf>
           <file leaf-file-name="Estruct_Lineal.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.idea/ESTRUCTURAS/Estruct_Lineal.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33333334">
-                  <caret line="724" column="50" selection-start-line="724" selection-start-column="50" selection-end-line="724" selection-end-column="50" />
+                <state vertical-scroll-proportion="0.63214284">
+                  <caret line="723" column="159" selection-start-line="723" selection-start-column="159" selection-end-line="723" selection-end-column="159" />
                   <folding />
                 </state>
               </provider>
@@ -57,11 +57,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ejemplo.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ejemplo.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.idea/ESTRUCTURAS/ejemplo.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.6666665">
-                  <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+                <state vertical-scroll-proportion="1.1976285">
+                  <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
                   <folding>
                     <element signature="e#23#65#0" expanded="true" />
                   </folding>
@@ -69,11 +69,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MATRIZ (1).py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MATRIZ (1).py" pinned="false" current-in-tab="false">
             <entry file="file://$USER_HOME$/Downloads/MATRIZ (1).py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-8.958333">
-                  <caret line="174" column="37" selection-start-line="174" selection-start-column="37" selection-end-line="174" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="223" column="32" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
                   <folding />
                 </state>
               </provider>
@@ -119,8 +119,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
+    <option name="x" value="413" />
+    <option name="y" value="59" />
     <option name="width" value="1320" />
     <option name="height" value="784" />
   </component>
@@ -208,7 +208,7 @@
       <recent name="C:\Users\Samuel\Desktop\2da_Practica\Edd_Alojan\.idea\PILA" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Estruct_Lineal">
+  <component name="RunManager" selected="Python.ejemplo (1)">
     <configuration default="false" name="Una_Lista" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -425,8 +425,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Estruct_Lineal" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ejemplo (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ejemplo (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Estruct_Lineal" />
         <item index="2" class="java.lang.String" itemvalue="Python.ejemplo" />
         <item index="3" class="java.lang.String" itemvalue="Python.General_Lista" />
         <item index="4" class="java.lang.String" itemvalue="Python.Una_Lista" />
@@ -447,16 +447,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="413" y="59" width="1320" height="784" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13496932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13266872" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24409449" sideWeight="0.2092803" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29121727" sideWeight="0.7907197" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5254237" sideWeight="0.7907197" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -488,11 +488,6 @@
           <url>file://$PROJECT_DIR$/.idea/ESTRUCTURAS/Estruct_Lineal.py</url>
           <line>817</line>
           <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/.idea/ESTRUCTURAS/Estruct_Lineal.py</url>
-          <line>669</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -876,28 +871,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/MATRIZ (1).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="223" column="32" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/ESTRUCTURAS/ejemplo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6666665">
-          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+        <state vertical-scroll-proportion="1.1976285">
+          <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding>
             <element signature="e#23#65#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/MATRIZ (1).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.958333">
-          <caret line="174" column="37" selection-start-line="174" selection-start-column="37" selection-end-line="174" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/ESTRUCTURAS/Estruct_Lineal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="724" column="50" selection-start-line="724" selection-start-column="50" selection-end-line="724" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.63214284">
+          <caret line="723" column="159" selection-start-line="723" selection-start-column="159" selection-end-line="723" selection-end-column="159" />
           <folding />
         </state>
       </provider>
